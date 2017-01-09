@@ -1,0 +1,20 @@
+{
+	"reecord1":[{"itemImage":"img/nikhil/mcase.jpg","itemName":"IPhone6 Mobile Case",
+	             "itemDesc":"Retain the original look of apple iPhone 6S/6 by using extremely Slim case. 
+	                 It is 1.2mm in thickness and weighs less than 18 grams.","itemPrice":"Rs.1,299"},
+	            {"itemImage":"img/nikhil/rolex.jpg","itemName":"Rolex Wrist Watch",
+	             "itemDesc":"Rolex watches are crafted from the finest raw materials and assembled with
+	                 scrupulous attention to detail. ","itemPrice":"Rs.2,11,000"},
+	            {"itemImage":"img/nikhil/rayban.jpg","itemName":"Ray-Ban Sunglasses",
+	             "itemDesc":" Aviator Classic sunglasses are a timeless model that combines great 
+	                 aviator styling with exceptional quality.","itemPrice":"Rs.7,790"}],
+	"reecord2":[{"itemImage":"img/nikhil/headset.jpg","itemName":"Sony Headphones",
+	                "itemDesc":"Significant noise reduction for travel, work and anywhere in between.
+						Deep, powerful sound for the music you love.","itemPrice":"Rs.2,099"},
+	            {"itemImage":"img/nikhil/iphone.png","itemName":"IPhone6",
+	                "itemDesc":"Store more and enjoy more, without using as much storage space with 
+	                    the Apple iPhone 6.","itemPrice":"Rs.33,990"},
+	            {"itemImage":"img/nikhil/macbook.jpeg","itemName":"MacBook Air",
+	                "itemDesc":"Showcase powerful computing and good looks by investing in this 
+	                 	Apple MacBook Pro. It features Retina Display and a powerful processor.","itemPrice":"Rs.61,290"}],
+}

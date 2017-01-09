@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+<style type="text/css">
+   #logout{
+    display: none;
+   } 
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <title>E-buy</title>
+    <link href="css/about.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
+    <link href="css/services.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="vendor/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+    <script src="vendor/angular-route/angular-route.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div ng-view></div>
+    <div ng-controller="AppCtrl">
+        <nav class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">             
+<!-- =====================================================================================================
+                                  navigation
+====================================================================================================== -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-header-navbar-collapse-1" aria-expanded="false">        
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse select1">
+                    <ul class="nav navbar-nav select">
+                        <li role="navigation"><a href="#/">e-buy</a></li>
+                        <li role="navigation"><a href="#/about">About</a></li>
+                        <li role="navigation"><a href="#/services">Services</a></li>
+                        <li role="navigation"><a href="#/contact">Contact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li>
+                            <li class="dropdown">
+<!-- =====================================================================================================
+                                  Signup dropdown
+====================================================================================================== -->
+                                <button class="dropdown-toggle btn btn-primary" data-toggle="dropdown" id="dropdownMenu2" type="button"><b>Signup</b> <span class="caret"></span></button>
+                                <ul id="login-dp" class="dropdown-menu">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <form class="form" role="form" id="login-nav">
+
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="exampleInputEmail2">Username</label>
+                                                        <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Username" ng-model="contact.name" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" ng-model="contact.email" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" ng-model="contact.password">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" ng-model="contact.confirmPassword">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-sm-6 col-sm-offset-3">
+                                                                <input type="submit"   name="register-submit" id="register-submit" tabindex="4" class="btn btn-primary btn-block" value="Signup" ng-click="addContact()">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+<!-- =====================================================================================================
+                                  Login Drop down
+====================================================================================================== -->
+
+                            <li class="dropdown logout">
+                                <div ng-show="myVar">
+                                    
+                                </div>
+                                <div>
+                                    <button class="dropdown-toggle btn btn-primary login" style="" data-toggle="dropdown" id="dropdownMenu3" type="button" ng-click="toggle()" ng-hide="myVar"><b>Log In</b> <span class="caret"></span></button>
+                                    
+                                    <button class=" btn btn-primary login" id="logout" style="" type="button"  ><a href="#/home"><b>Log Out</b> <span class="caret"></span></a></button>
+
+
+                                    <ul id="login-dp" class="dropdown-menu">
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    Login with
+                                                    <div class="social-buttons">
+                                                        <a href="https://www.facebook.com" target="-blank" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                                        <a href="https://twitter.com/" target="-blank" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                                                    </div>
+
+                                                    or
+
+                                                    <form class="form" role="form" id="login-nav">
+                                                        <br/>
+                                                        <div class="form-group">
+                                                            <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required ng-model="contact.email">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                                            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required ng-model="contact.password">
+                                                            <div id="forger" class="help-block text-right"><a href="">Forgot Password</a></div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <button type="submit" class="btn btn-primary btn-block" ng-click="login()">Log In</button>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                 <input type="checkbox"> Remember Me
+                                                                 </label>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="bottom text-center">
+                                                    New to E-buy? <a href="#"><b>Sign up</b></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+<!-- =====================================================================================================
+                                  Controllers
+====================================================================================================== -->
+    <script src="js/route.js"></script><!-- for routing -->
+    <script src="js/controllers/controller.js"></script><!-- for login and signup -->
+    <script src="js/controllers/itemCtrl.js"></script><!-- for review of particular item -->
+    <script src="js/controllers/homeCtrl.js"></script><!-- for adding and remove function -->
+    <script src="js/directives/productsDir.js"></script>
+</body>
+
+</html>

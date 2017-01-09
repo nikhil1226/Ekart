@@ -1,0 +1,76 @@
+<style type="">
+#logout
+{
+    display: inline;
+}
+.login {
+    display:none;
+}
+#logout a
+{
+    color: white;
+}
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10"></div>
+        <div class="col-md-2">
+            <div class="dropdown">
+                <button class="dropdown-toggle btn btn-default glyphicon glyphicon-shopping-cart pull-right" data-toggle="dropdown" id="dropdownMenu1" aria-haspopup="true" aria-expanded="true" type="button"><b> Cart {{count}}</b> <span class="caret"></span></button>
+                <div class="dropdown-menu">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="removeCart btn btn-warning" ng-repeat="r in cartArr">Item name : {{r}}</button>
+                        </div>
+                        <div class="col-md-12 ">
+                            <button class="removeCart btn btn-warning" ng-click="remove()">Remove from Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 "></div>
+        <div class="col-md-9">
+            <img src="{{rec.itemImage}}">
+            <div>
+                <h4>{{rec.itemName}}</h4>
+            </div>
+            <span><p>{{rec.itemDesc}}</p></span>
+        </div>
+    </div>
+
+    <div class="col-md-3"></div>
+    <div class="col-md-9">
+        <div>
+            <h4 class="pull-right" style="color:red">{{rec.itemPrice}}</h4>
+            <h6><button class="btn btn-primary" ng-click="add(rec.itemName,logSucess)">Add to Cart</button></h6>
+
+        </div>
+        <br><br>
+        <div class="well">
+            <h4 style="font-weight:bold">Review this product</h4>
+            <div class="form-group">
+
+                <input type="text" class="form-control" class="exampleInputEmail1" placeholder="Username" ng-model="username">
+                <br><br>
+                <textarea id="comment" class="form-control" rows="5" placeholder="write your review here..." ng-model="review"></textarea><br>
+                <button type="button" class="btn btn-success" ng-click="myFunc(logSucess)">SUBMIT</button>
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-9">
+                    <div ng-repeat="y in rwArr">
+                        <p>User Name :{{y.username}}</p>
+                        <p>Review : {{y.review}}</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

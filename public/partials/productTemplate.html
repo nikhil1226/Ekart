@@ -1,0 +1,12 @@
+ 	<div class="col-sm-6 col-md-4">  
+		  			<div class="thumbnail"> 
+		  				<img alt="100%x200"  ng-src="{{rec.itemImage}}" data-holder-rendered="true" style="height: 350px; width: 100%; display: block;">
+					   <div class="caption"> 
+						   <h3><a href="#/item" ng-click="clickCounter(rec)"> {{rec.itemName}} </a></h3>
+						   <p> {{rec.itemDesc }}</p> 
+						   <h4 class="pull-left"> {{rec.itemPrice}} </h4>
+						   <h6><button class="btn btn-primary" style="float:right" ng-click="add(rec.itemName)">Add to Cart</button></h6>
+	 
+						</div> 
+					</div> 
+				</div> 
